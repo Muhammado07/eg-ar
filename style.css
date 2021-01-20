@@ -1346,6 +1346,13 @@ a {
     justify-content: center;
     align-items: center;
   }
+  .app .content .ap {
+    height: auto;
+  }
+  .app .content .ap .img {
+    width: auto;
+    height: auto;
+  }
 }
 
 /* ===========================
