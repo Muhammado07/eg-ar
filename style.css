@@ -121,9 +121,6 @@ a {
   margin-left: 5px;
   transition: all 0.3s ease-in-out;
 }
-.nav .links .subnavbtn:hover img {
-  transform: rotate(-90deg);
-}
 .nav .links .last {
   position: relative;
 }
@@ -780,6 +777,9 @@ a {
 @media screen and (max-width: 767px) {
   .video .img {
     height: 250px;
+  }
+  .video .img p {
+    top: 75%;
   }
 }
 
