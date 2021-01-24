@@ -457,6 +457,9 @@ a {
   }
 }
 @media screen and (max-width: 767px) {
+  .hero {
+    background-position: 60% 5%;
+  }
   .hero h1 {
     max-width: 90%;
     font-size: 36px;
@@ -1875,6 +1878,6 @@ a {
 @media screen and (max-width: 767px) {
   .hero-error .img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
