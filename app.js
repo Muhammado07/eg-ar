@@ -7,12 +7,13 @@ window.onscroll = function () {
 
     // pageYOffset or scrollY
 
-    if (window.pageYOffset > 180) {
+    if (window.pageYOffset > 80) {
         navbar.classList.add('scrolled')
         logo.setAttribute("src", "img/logo.png")
         caret.forEach(function (carets) {
             carets.setAttribute("src", "img/icon-caret.svg")
         })
+
     } else {
         navbar.classList.remove('scrolled')
         logo.setAttribute("src", "img/logo-white.png")
@@ -20,6 +21,12 @@ window.onscroll = function () {
             carets.setAttribute("src", "img/caret-white.svg")
         })
 
+    }
+    if (navbar.classList.contains('no')) {
+        logo.setAttribute("src", "img/logo.png")
+        caret.forEach(function (carets) {
+            carets.setAttribute("src", "img/icon-caret.svg")
+        })
     }
 }
 

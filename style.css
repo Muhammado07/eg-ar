@@ -104,7 +104,9 @@ a {
   padding: 25px 0;
   letter-spacing: 1px;
 }
-
+.no .nav .links a {
+  color: var(--second-color);
+}
 .nav .links .sub-nav,
 .nav .links .last {
   margin-left: 25px;
@@ -778,8 +780,12 @@ a {
   .video .img {
     height: 250px;
   }
+  .video .img img {
+    width: 50px;
+    height: 50px;
+  }
   .video .img p {
-    top: 75%;
+    top: 70%;
   }
 }
 
@@ -821,7 +827,7 @@ a {
   text-align: center;
 }
 .watch .video-co iframe {
-  width: 100%;
+  width: 80%;
   height: 90vh;
 }
 @media screen and (max-width: 767px) {
@@ -1799,5 +1805,76 @@ a {
   }
   .value .content .vl:last-child {
     margin-bottom: 0;
+  }
+}
+
+/* ====================================
+  ============ 404 PAGE ===============
+======================================= */
+.hero-error {
+  padding: 100px 0;
+  position: relative;
+  background-color: var(--third-color);
+  width: 100vw;
+}
+.hero-error .img,
+.hero-error .content,
+.hero-error .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-error .img {
+  width: 70%;
+  height: auto;
+  margin: auto;
+}
+.hero-error .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-error .content h3 {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--second-color);
+  letter-spacing: 0.05384615em;
+  line-height: 1.46153846em;
+  text-transform: uppercase;
+  position: relative;
+  padding: 30px 0;
+}
+.hero-error .error {
+  width: 100%;
+  text-align: center;
+}
+.hero-error .error a {
+  cursor: pointer;
+  outline: none;
+  border-radius: 0;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  border: 1px solid var(--second-color);
+  padding: 14px 34px;
+  min-width: 120px;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease-in-out 0ms;
+  color: var(--second-color);
+}
+.hero-error .error a:hover {
+  background-color: var(--first-color);
+  color: var(--third-color);
+  border: 1px solid var(--first-color);
+}
+@media screen and (max-width: 767px) {
+  .hero-error .img {
+    width: 100%;
+    height: auto;
   }
 }
