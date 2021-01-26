@@ -21,6 +21,7 @@ body {
   overflow-x: hidden;
   background-color: var(--third-color);
   scroll-behavior: smooth;
+  outline: none;
 }
 *,
 a,
@@ -103,9 +104,11 @@ a {
   font-size: 16px;
   padding: 25px 0;
   letter-spacing: 1px;
+  outline: none;
 }
 .no .nav .links a {
   color: var(--second-color);
+  outline: none;
 }
 .nav .links .sub-nav,
 .nav .links .last {
@@ -840,6 +843,49 @@ a {
   }
 }
 
+/* ============================
+    ======== BRANDS ===========
+    =========================== */
+
+.brands {
+  padding: 20px 0 50px;
+  position: relative;
+  background-color: var(--third-color);
+}
+.brands h2 {
+  text-align: center;
+  color: var(--second-color);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.brands .topics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+}
+.brands .topics img {
+  width: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .brands .topics {
+    flex-direction: column;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  .brands .topics img {
+    margin-bottom: 25px;
+  }
+}
 /* Footer */
 
 .footer {
@@ -1005,6 +1051,7 @@ a {
   position: relative;
   background-color: #fbfbfb;
   width: 100vw;
+  background: url(img/para.png) 50% 25% no-repeat;
 }
 .company h2 {
   font-size: 36px;
@@ -1036,14 +1083,44 @@ a {
   align-items: center;
   text-align: left;
   grid-gap: 10px;
+  padding: 10px 0;
 }
 .company .details .values .vs {
   background-color: var(--third-color);
-  padding: 20px;
-  border-top: 4px solid var(--first-color);
   border-radius: 5px;
   height: 300px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.company .details .values .vs:after {
+  background: linear-gradient(to bottom, #2d72b9 0%, #2cbcb1 100%);
+  border-radius: 5px;
+  top: 0;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-15%);
+}
+.company .details .values .vs:hover:after {
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  z-index: -1;
+}
+.company .details .values .vs:hover {
+  transform: translateY(-10px);
+}
+.company .details .values .vs .details {
+  padding: 20px;
 }
 .company .details .values .vs h4 {
   font-size: 20px;
@@ -1056,7 +1133,15 @@ a {
   color: var(--second-color);
   line-height: 1.4;
 }
+.company .details .values .vs:hover h4,
+.company .details .values .vs:hover p {
+  color: #fff;
+  z-index: 2;
+}
 @media screen and (max-width: 767px) {
+  .company {
+    background: transparent;
+  }
   .company .details .values {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1125,7 +1210,18 @@ a {
 .project .pro .main {
   height: 450px;
   background-color: var(--third-color);
-  border-bottom: 5px solid var(--first-color);
+
+  position: relative;
+}
+.project .pro .main::after {
+  background: linear-gradient(to bottom, #2d72b9 0%, #2cbcb1 100%);
+  border-radius: 5px;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 .project .pro .main.main-head {
   background: linear-gradient(136.49deg, #2d72b9 0%, #2b93b2 100%);
@@ -1134,6 +1230,9 @@ a {
   padding: 60px 40px 40px;
   line-height: 1.5;
   border-bottom: none;
+}
+.project .pro .main.main-head::after {
+  background: transparent;
 }
 .project .pro .main h3 {
   padding: 20px;
@@ -1150,6 +1249,10 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.project .pro .main .img:hover img {
+  transform: scale(1.2);
 }
 @media screen and (max-width: 767px) {
   .project .pro {
@@ -1256,28 +1359,70 @@ a {
   grid-gap: 10px;
 }
 .resi .content .details {
-  height: 350px;
+  height: 380px;
   background-color: var(--third-color);
-  border-bottom: 5px solid var(--first-color);
   width: 340px;
   border-radius: 3px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.resi .content .details::after {
+  background: linear-gradient(to bottom, #2d72b9 0%, #2cbcb1 100%);
+  border-radius: 5px;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 .resi .content .details .img {
   width: 340px;
   height: 250px;
   overflow: hidden;
-  border-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .resi .content .details .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.resi .content .details .img:hover img {
+  transform: scale(1.2);
+  filter: brightness(0.9);
 }
 .resi .content .details h3 {
   padding-top: 20px;
   text-align: center;
   color: var(--second-color);
   font-size: 22px;
+}
+.resi .content .details .link {
+  margin-top: 15px;
+}
+.resi .content .details .link a {
+  cursor: pointer;
+  outline: none;
+  border-radius: 2px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  border: 1px solid var(--third-color);
+  padding: 14px 34px;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease-in-out 0ms;
+  color: var(--third-color);
+  background: linear-gradient(136.49deg, #2d72b9 0%, #2b93b2 100%);
+}
+.resi .content .details .link a:hover {
+  opacity: 0.9;
 }
 @media screen and (max-width: 767px) {
   .hero-res {
@@ -1517,7 +1662,17 @@ a {
 .smart .content .main {
   height: 450px;
   background-color: var(--third-color);
-  border-bottom: 5px solid var(--first-color);
+  position: relative;
+}
+.smart .content .main:after {
+  background: linear-gradient(to bottom, #2d72b9 0%, #2cbcb1 100%);
+  border-radius: 5px;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 .smart .content .main.main-head {
   background: linear-gradient(136.49deg, #2d72b9 0%, #2b93b2 100%);
@@ -1526,6 +1681,9 @@ a {
   padding: 60px 40px 40px;
   line-height: 1.5;
   border-bottom: none;
+}
+.smart .content .main.main-head::after {
+  background: transparent;
 }
 .smart .content .main.main-head h2 {
   padding: 20px;
@@ -1548,6 +1706,10 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.smart .content .main .img:hover img {
+  transform: scale(1.2);
 }
 .home {
   padding: 50px 0;
@@ -1880,5 +2042,100 @@ a {
   .hero-error .img {
     width: 100%;
     height: 100%;
+  }
+}
+
+/* ===============================
+    ======== CONTACT PAGE ========
+    ============================== */
+
+.hero-contact {
+  background: url("img/contact.jpeg") 40% 60% no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
+.hero-contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-contact h1 {
+  position: absolute;
+  padding-top: 270px;
+  color: var(--third-color);
+  font-weight: bold;
+  z-index: 2;
+  font-size: 75px;
+  max-width: 50%;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 767px) {
+  .hero-contact {
+    height: 60vh;
+  }
+  .hero-contact h1 {
+    max-width: 100%;
+    font-size: 55px;
+  }
+}
+
+/* Contact */
+.contact {
+  padding: 50px 0;
+  position: relative;
+  background-color: var(--third-color);
+}
+.contact .content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.contact .content .details h2 {
+  color: var(--second-color);
+  font-size: 35px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.contact .content .details p {
+  color: var(--second-color);
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.contact .content .details p a {
+  color: var(--first-color);
+  font-weight: bold;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+.contact .content .details p a:hover {
+  color: var(--second-color);
+}
+.contact .content .img {
+  width: 300px;
+  height: auto;
+  margin: auto;
+}
+.contact .content .img img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 767px) {
+  .contact .content {
+    grid-template-columns: 1fr;
+  }
+  .contact .content .img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
   }
 }
