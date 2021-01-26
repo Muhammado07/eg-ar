@@ -878,12 +878,13 @@ a {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
-    margin-bottom: 30px;
+    grid-gap: 20px;
     padding: 0;
   }
   .brands .topics img {
-    margin-bottom: 25px;
+    margin: 10px auto;
+    align-items: center;
+}
   }
 }
 /* Footer */
