@@ -840,6 +840,7 @@ a {
 @media screen and (max-width: 767px) {
   .watch .video-co iframe {
     height: 50vh;
+    width: 100%;
   }
 }
 
@@ -884,7 +885,6 @@ a {
   .brands .topics img {
     margin: 10px auto;
     align-items: center;
-}
   }
 }
 /* Footer */
