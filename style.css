@@ -1149,6 +1149,7 @@ a {
   .company .details .values .vs {
     height: auto;
     padding: 15px;
+    margin-bottom: 10px;
   }
 }
 
