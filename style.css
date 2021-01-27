@@ -1212,8 +1212,11 @@ a {
 .project .pro .main {
   height: 450px;
   background-color: var(--third-color);
-
   position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.project .pro .main:hover {
+  transform: scale(0.95);
 }
 .project .pro .main::after {
   background: linear-gradient(to bottom, #2d72b9 0%, #2cbcb1 100%);
@@ -1232,6 +1235,9 @@ a {
   padding: 60px 40px 40px;
   line-height: 1.5;
   border-bottom: none;
+}
+.project .pro .main.main-head:hover {
+  transform: none;
 }
 .project .pro .main.main-head::after {
   background: transparent;
