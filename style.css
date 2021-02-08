@@ -14,7 +14,7 @@
   -o-box-sizing: border-box;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "SegoeUIRegular", Arial, sans-serif;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -1215,9 +1215,6 @@ a {
   position: relative;
   transition: all 0.3s ease-in-out;
 }
-.project .pro .main:hover {
-  transform: scale(0.95);
-}
 .project .pro .main::after {
   background: linear-gradient(to bottom, #2d72b9 0%, #2cbcb1 100%);
   border-radius: 5px;
@@ -1420,7 +1417,6 @@ a {
   font-weight: 600;
   text-decoration: none;
   position: relative;
-  border: 1px solid var(--third-color);
   padding: 14px 34px;
   font-size: 16px;
   margin-left: auto;
@@ -1591,6 +1587,69 @@ a {
   font-size: 16px;
   line-height: 1.7;
   color: var(--second-color);
+}
+.pop-up {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 9;
+  display: none;
+}
+.pop-up .pop-btn {
+  cursor: pointer;
+  outline: none;
+  border-radius: 2px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  padding: 14px 34px;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease-in-out 0ms;
+  color: var(--third-color);
+  background: linear-gradient(136.49deg, #2d72b9 0%, #2b93b2 100%);
+}
+.pop-up .pop-btn:hover {
+  opacity: 0.9;
+}
+.pop-up.show {
+  display: inline-block;
+}
+.pop-over {
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  position: fixed;
+  background-color: var(--third-color);
+  z-index: 999999999;
+  overflow-y: hidden;
+  transition: all 0.3s ease-in-out;
+  overflow-y: hidden;
+  backdrop-filter: opacity(10%);
+}
+.pop-over.view {
+  top: 0;
+}
+.pop-over .pop-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop-over .cancel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20x;
+  cursor: pointer;
+  z-index: 9999;
 }
 @media screen and (max-width: 767px) {
   .hero-com {
@@ -2106,6 +2165,11 @@ a {
   grid-template-columns: 2fr 1fr;
   justify-content: center;
   align-items: center;
+  grid-gap: 10px;
+}
+.contact .content .details {
+  align-self: baseline;
+  padding-right: 50px;
 }
 .contact .content .details h2 {
   color: var(--second-color);
@@ -2115,8 +2179,8 @@ a {
 }
 .contact .content .details p {
   color: var(--second-color);
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.7;
   margin-bottom: 15px;
 }
 .contact .content .details p a {
@@ -2137,6 +2201,194 @@ a {
   width: 100%;
   height: 100%;
 }
+
+/* Form */
+.con-form .info p {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--second-color);
+  letter-spacing: 0;
+  line-height: 1.64285714em;
+  margin-bottom: 20px;
+}
+.formbox {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.series.con-us .formbox form {
+  position: relative;
+  width: 100%;
+}
+.formbox form .input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+.formbox form .input-box:last-child {
+  margin-bottom: 0;
+}
+.formbox form .input-box input,
+.formbox form .input-box textarea {
+  position: relative;
+  background: transparent;
+  outline: none;
+  border: 1px solid #b9b9b9;
+  width: 100%;
+  color: var(--second-color);
+  padding-bottom: 0;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-top: 28px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  transition: all 0.2s;
+}
+.formbox form .input-box textarea {
+  resize: none;
+  -webkit-appearance: none;
+  letter-spacing: 0;
+  height: 126px;
+  padding: 27px 20px 0;
+}
+.formbox form .input-box input[type="submit"] {
+  background: transparent;
+  color: var(--third-color);
+  width: 150px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  transition: all 0.2s;
+  border: 1px solid var(--first-color);
+  background-color: var(--first-color);
+  transition: all 0.3s ease-in-out;
+}
+.formbox form .input-box input[type="submit"]:hover {
+  opacity: 0.9;
+}
+.series.con-us
+  .form-details
+  .formbox
+  form
+  .input-box
+  input[type="submit"]:hover {
+  background-color: var(--first-color);
+  border-color: var(--first-color);
+}
+.formbox form .input-box span {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  font-size: 16px;
+  display: inline-block;
+  pointer-events: none;
+  color: #b9b9b9;
+  transition: all 0.2s;
+}
+.formbox form .input-box span.tes {
+  top: 30px;
+}
+.formbox form .input-box input:focus ~ span,
+.formbox form .input-box input:valid ~ span,
+.formbox form .input-box textarea:focus ~ span,
+.formbox form .input-box textarea:valid ~ span {
+  transform: translateY(-22px);
+  font-size: 12px;
+  color: #b9b9b9;
+}
+.formbox form .input-box .input-file {
+  text-align: right;
+}
+.formbox form .input-box .input-file input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.formbox form .input-box .input-file label p {
+  font-weight: 400;
+}
+.formbox form .addtion {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--second-color);
+  letter-spacing: 0;
+  line-height: 1.64285714em;
+  margin-bottom: 20px;
+}
+.formbox form .policy {
+  padding-top: 30px;
+}
+.formbox form .pos {
+  padding-top: 0px;
+}
+.formbox form .policy .checkbox {
+  position: relative;
+}
+
+.formbox form .policy .checkbox input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+}
+.formbox form .policy .checkbox label {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  padding: 0 0 0 35px;
+  line-height: 23px;
+  z-index: 9;
+  -webkit-transition: border 0.25s ease-in-out 0ms;
+  transition: border 0.25s ease-in-out 0ms;
+  color: #7f7f7f;
+}
+.formbox form .policy .checkbox label a {
+  color: #7f7f7f;
+  text-decoration: underline;
+}
+.formbox form .policy .checkbox .check {
+  display: block;
+  position: absolute;
+  border: 1px solid #b9b9b9;
+  height: 23px;
+  width: 23px;
+  top: 0;
+  left: 0;
+  -webkit-transition: border 0.25s ease-in-out 0ms;
+  transition: border 0.25s ease-in-out 0ms;
+  border-radius: 0;
+  background: transparent;
+  z-index: 1;
+}
+.formbox form .policy .checkbox .check::after {
+  content: "";
+  width: 11px;
+  height: 7px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: 2px solid var(--third-color);
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: opacity 0.2s ease-in-out 0ms;
+  transition: opacity 0.2s ease-in-out 0ms;
+}
+.formbox form .policy .checkbox input[type="checkbox"]:checked ~ .check {
+  background-color: var(--first-color);
+  border: none;
+}
+.formbox form .policy .checkbox input[type="checkbox"]:checked ~ .check:after {
+  opacity: 1;
+}
+
 @media screen and (max-width: 767px) {
   .contact .content {
     grid-template-columns: 1fr;
@@ -2145,5 +2397,248 @@ a {
     width: 100%;
     max-width: 100%;
     display: block;
+  }
+  .contact .content .details {
+    padding-right: 0;
+  }
+  .contact .content .details h2 {
+    font-size: 22px;
+  }
+}
+
+/* ====================================
+  ========== SMART HOMES PAGE =========
+======================================= */
+
+.hero-smart {
+  background: url("img/smart-home.jpeg") 40% 50% no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
+.hero-smart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-smart h1 {
+  position: absolute;
+  padding-top: 270px;
+  color: var(--third-color);
+  font-weight: bold;
+  z-index: 2;
+  font-size: 75px;
+  max-width: 50%;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 767px) {
+  .hero-smart {
+    height: 60vh;
+  }
+  .hero-smart h1 {
+    max-width: 100%;
+    font-size: 55px;
+  }
+}
+/* Main Home */
+.main-home {
+  background-color: var(--third-color);
+  padding: 0 0 50px;
+  position: relative;
+  width: 100vw;
+}
+.tab-content {
+  background-color: #fbfbfb;
+}
+.tab-content {
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.tab-content h3 {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+.tab-content a {
+  padding: 10px;
+}
+.tab-content a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--first-color);
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: -webkit-transform 0.3s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.tab-content h3:hover a::after {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999999999999999;
+  transition: all 0.3s ease-in-out;
+}
+.main-home .head {
+  padding-top: 30px;
+}
+.main-home .head h2 {
+  color: var(--second-color);
+  font-size: 35px;
+  line-height: 1.7;
+}
+.main-home .head p,
+.main-home .details .des .content p {
+  color: var(--second-color);
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.main-home .details {
+  margin: 0 0 40px;
+}
+
+.main-home .details .des {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  grid-gap: 10px;
+}
+.main-home .details .des .img {
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+.main-home .details .des .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-home .details .des .content {
+  padding: 30px;
+}
+.main-home .details .des .content ul {
+  padding-top: 10px;
+}
+.main-home .details .des .content ul li {
+  padding-bottom: 20px;
+  padding-left: 20px;
+  position: relative;
+  color: var(--second-color);
+  font-size: 16px;
+  line-height: 1.4;
+}
+.main-home .details .des .content ul li::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  list-style: 10px;
+  border-radius: 50%;
+  background: linear-gradient(136.49deg, #2d72b9 0%, #2b93b2 100%);
+  top: 5px;
+  left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .main-home .details {
+    margin: 0;
+  }
+  .tab-content {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .tab-content h3 {
+    padding: 15px;
+  }
+  .main-home .content,
+  .main-home .details .des {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-home .details .des .content {
+    padding: 5px;
+  }
+  .main-home .head h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .main-home .details:nth-child(2) .des .img {
+    order: -1;
+  }
+}
+/* ====================================
+  ======== SMART BUILDING PAGE ========
+======================================= */
+
+.hero-network {
+  background: url("img/smart-build.jpeg") 40% 50% no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
+.hero-network::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-network h1 {
+  position: absolute;
+  padding-top: 270px;
+  color: var(--third-color);
+  font-weight: bold;
+  z-index: 2;
+  font-size: 75px;
+  max-width: 50%;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 767px) {
+  .hero-network {
+    height: 60vh;
+  }
+  .hero-network h1 {
+    max-width: 100%;
+    font-size: 55px;
   }
 }
