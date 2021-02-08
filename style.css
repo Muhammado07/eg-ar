@@ -1677,6 +1677,10 @@ a {
   .product .content .pro .details h4 {
     font-size: 18px;
   }
+  .pop-over {
+    padding: 40px 0;
+    z-index: 9999999999999999999999999999999999999;
+  }
 }
 
 /* ====================================
