@@ -2451,6 +2451,12 @@ a {
     font-size: 55px;
   }
 }
+@media screen and (max-width: 320px) {
+  .hero-smart h1 {
+    max-width: 100%;
+    font-size: 32px;
+  }
+}
 /* Main Home */
 .main-home {
   background-color: var(--third-color);
@@ -2644,5 +2650,11 @@ a {
   .hero-network h1 {
     max-width: 100%;
     font-size: 55px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .hero-network h1 {
+    max-width: 100%;
+    font-size: 32px;
   }
 }
