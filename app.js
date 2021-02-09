@@ -2,13 +2,9 @@ const navbar = document.querySelector(".navbar")
 const logo = document.querySelector(".navbar .logo img")
 const caret = document.querySelectorAll(".navbar .subnavbtn img")
 
-const popBtn = document.querySelector(".pop-up")
-
-
 
 
 window.onscroll = function () {
-
     // pageYOffset or scrollY
 
     if (window.pageYOffset > 80) {
@@ -26,6 +22,7 @@ window.onscroll = function () {
             carets.setAttribute("src", "img/caret-white.svg")
         })
 
+
     }
 
 
@@ -34,15 +31,6 @@ window.onscroll = function () {
         caret.forEach(function (carets) {
             carets.setAttribute("src", "img/icon-caret.svg")
         })
-    }
-
-    // Show Btn pop-up
-
-    if (window.pageYOffset > 300) {
-        popBtn.classList.add("show")
-
-    } else {
-        popBtn.classList.remove("show")
     }
 
 }
@@ -80,17 +68,6 @@ ham.addEventListener("click", function () {
     document.body.classList.toggle("nav-is-toggled");
 });
 
-
-// Show Contact pop-up
-const pop = document.querySelector(".pop-over")
-const cancel = document.querySelector(".cancel")
-
-popBtn.addEventListener("click", function () {
-    pop.classList.add("view")
-})
-cancel.addEventListener("click", function () {
-    pop.classList.remove("view")
-})
 
 
 

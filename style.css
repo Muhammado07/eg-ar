@@ -20,8 +20,10 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-color: var(--third-color);
-  scroll-behavior: smooth;
   outline: none;
+}
+html {
+  scroll-behavior: smooth;
 }
 *,
 a,
@@ -1589,11 +1591,12 @@ a {
   color: var(--second-color);
 }
 .pop-up {
-  position: fixed;
-  right: 10px;
+  /* position: fixed; */
+  /* right: 10px;
   bottom: 10px;
-  z-index: 9;
-  display: none;
+  z-index: 9; */
+  display: flex;
+  padding: 0 0 50px;
 }
 .pop-up .pop-btn {
   cursor: pointer;
@@ -1616,9 +1619,9 @@ a {
 .pop-up .pop-btn:hover {
   opacity: 0.9;
 }
-.pop-up.show {
+/* .pop-up.show {
   display: inline-block;
-}
+} */
 .pop-over {
   width: 100%;
   height: 100%;
@@ -2451,7 +2454,7 @@ a {
     font-size: 55px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   .hero-smart h1 {
     max-width: 100%;
     font-size: 32px;
@@ -2652,7 +2655,7 @@ a {
     font-size: 55px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   .hero-network h1 {
     max-width: 100%;
     font-size: 32px;
