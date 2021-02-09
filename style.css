@@ -13,6 +13,9 @@
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "SegoeUIRegular", Arial, sans-serif;
   width: 100%;
@@ -21,9 +24,6 @@ body {
   overflow-x: hidden;
   background-color: var(--third-color);
   outline: none;
-}
-html {
-  scroll-behavior: smooth;
 }
 *,
 a,
