@@ -1,5 +1,7 @@
 /* Design By: Mohamed Ali === Al Salem Johnson Controls */
 
+@import url("https://use.typekit.net/mzs4sen.css");
+
 :root {
   --first-color: #00539e;
   --second-color: #151515;
@@ -19,7 +21,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "SegoeUIRegular", Arial, sans-serif;
+  font-family: "proxima-nova", Arial, sans-serif;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -135,7 +137,7 @@ a {
 }
 .nav .links .subnavbtn::after {
   position: absolute;
-  left: -15px;
+  left: -12px;
   top: 0;
   height: 1.25em;
   width: 1px;
@@ -144,7 +146,7 @@ a {
 }
 .nav .links .last::after {
   position: absolute;
-  left: -15px;
+  left: -11px;
   top: 23px;
   height: 1.25em;
   width: 1px;
@@ -745,9 +747,9 @@ a {
   padding: 30px 0;
 }
 .video .img {
-  background: url("img/arab.jpeg") center center no-repeat;
+  background: url("img/arab2.jpeg") center center no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 550px;
   width: 100%;
   position: relative;
   cursor: pointer;
@@ -2485,7 +2487,7 @@ a {
 }
 .tab-content {
   background-color: #fbfbfb;
-  padding: 30px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2543,6 +2545,7 @@ a {
   width: 100%;
   z-index: 9999999999999999;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 14px 0 rgb(0 0 0 / 8%);
 }
 .main-home .head {
   padding-top: 30px;
@@ -2857,6 +2860,10 @@ a {
   }
   .main-apply .details .des .content {
     padding: 5px;
+    width: 100%;
+  }
+  .main-apply .head {
+    padding-top: 0;
   }
   .main-apply .head h2 {
     font-size: 22px;
