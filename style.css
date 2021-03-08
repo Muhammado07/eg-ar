@@ -2985,6 +2985,19 @@ a {
 
   /* End custom */
 }
+@media screen and (max-width: 380px) {
+  .tab-content,
+  .tab-content .taby,
+  .main-apply .tab-content {
+    flex-direction: column;
+  }
+  .custom-select-wrapper {
+    width: 100%;
+  }
+  .tabys .pop-up {
+    margin-top: 10px;
+  }
+}
 
 /* =================================================
   ========== Industrial Refrigeration PAGE =========
