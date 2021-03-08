@@ -1703,6 +1703,17 @@ a {
     z-index: 9999999999999999999999999999999999999;
   }
 }
+@media screen and (max-width: 360px) {
+  .pop-over .pop-content {
+    overflow-y: scroll;
+  }
+  .formbox {
+    margin-top: 150px;
+  }
+  .mail-us {
+    margin-bottom: 60px;
+  }
+}
 
 /* ====================================
   ====== Efficient Buildings PAGE =====
