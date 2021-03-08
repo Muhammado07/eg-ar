@@ -2618,8 +2618,8 @@ a {
   .tab-content .taby {
     padding: 15px 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -2839,16 +2839,16 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
   }
   .main-home .taby,
   .main-apply .taby {
     display: none;
   }
-  .main-home .tabys,
+  /* .main-home .tabys,
   .main-apply .tabys {
     margin-top: 15px;
-  }
+  } */
   .main-apply .details {
     margin: 0;
   }
@@ -2881,7 +2881,7 @@ a {
   .custom-select-wrapper {
     position: relative;
     user-select: none;
-    width: 100%;
+    width: 58%;
   }
   .custom-select {
     position: relative;
@@ -2896,12 +2896,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 22px;
-    font-size: 20px;
+    padding: 0 10px;
+    font-size: 16px;
     font-weight: 300;
     color: #3b3b3b;
-    height: 60px;
-    line-height: 60px;
+    height: 50px;
+    line-height: 50px;
     background: #ffffff;
     cursor: pointer;
     border-width: 2px 0 2px 0;
@@ -2932,7 +2932,7 @@ a {
     position: relative;
     display: block;
     padding: 0 22px 0 22px;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 300;
     color: #3b3b3b;
     line-height: 60px;
@@ -2978,6 +2978,9 @@ a {
   .open .arrow::after {
     left: 5px;
     transform: rotate(45deg);
+  }
+  .tab-content a {
+    padding: 5px 0 5px 20px;
   }
 
   /* End custom */
