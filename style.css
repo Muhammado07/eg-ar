@@ -2240,6 +2240,7 @@ a {
   line-height: 1.4;
   margin-bottom: 10px;
 }
+
 .value .content .vl {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
