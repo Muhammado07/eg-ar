@@ -143,7 +143,7 @@ a {
   height: 1.25em;
   width: 1px;
   content: "";
-  background: var(--second-color);
+  background: var(--third-color);
 }
 .nav .links .last::after {
   position: absolute;
@@ -152,6 +152,10 @@ a {
   height: 1.25em;
   width: 1px;
   content: "";
+  background: var(--third-color);
+}
+.navbar.scrolled .nav .links .subnavbtn::after,
+.navbar.scrolled .nav .links .last::after {
   background: var(--second-color);
 }
 .nav .links .sub-content {
@@ -2852,6 +2856,18 @@ a {
   position: relative;
   font-size: 16px;
 }
+.tab-content h3.speci a {
+  color: #3b3b3b9c;
+}
+.tab-content h3.speci::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #3b3b3b40;
+  width: 2px;
+  height: 100%;
+}
 .tab-content a {
   padding: 10px;
 }
@@ -2880,6 +2896,12 @@ a {
   transform-origin: left top;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+.tab-content h3.speci a::after {
+  background: transparent;
+  width: 0;
+  transform: scaleX(0);
+  height: 0;
 }
 .sticky {
   position: fixed;
