@@ -1862,7 +1862,7 @@ a {
   margin-bottom: 20px;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .product .content .contents ul li {
   padding-bottom: 20px;
