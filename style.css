@@ -1851,7 +1851,8 @@ a {
   margin-bottom: 30px;
 }
 .product .content .pro .details .link a,
-.main-apply .details .des .link a {
+.main-apply .details .des .link a,
+.brief .info .link a {
   color: var(--third-color);
   width: 150px;
   cursor: pointer;
@@ -1864,11 +1865,13 @@ a {
   transition: all 0.3s ease-in-out;
 }
 .product .content .pro .details .link a:hover,
-.main-apply .details .des .link a:hover {
+.main-apply .details .des .link a:hover,
+.brief .info .link a:hover {
   opacity: 0.9;
 }
 .product .content .contents {
   display: grid;
+  grid-gap: 20px;
   margin-bottom: 20px;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
@@ -2008,6 +2011,7 @@ a {
   }
   .product .content .contents {
     grid-template-columns: 1fr;
+    grid-gap: 0;
   }
 }
 @media screen and (max-width: 360px) {
@@ -3597,6 +3601,9 @@ a {
   padding: 50px 0 0;
   background: var(--third-color);
 }
+.brilast {
+  padding: 50px 0;
+}
 .brief .info h2 {
   font-size: 36px;
   line-height: 1.3;
@@ -3620,6 +3627,7 @@ a {
 }
 .brief .contents {
   display: grid;
+  grid-gap: 20px;
   margin-bottom: 20px;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
@@ -3647,6 +3655,7 @@ a {
 @media screen and (max-width: 767px) {
   .brief .contents {
     grid-template-columns: 1fr;
+    grid-gap: 0;
   }
   .brief .info h2 {
     font-size: 28px;

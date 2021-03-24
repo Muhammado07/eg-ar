@@ -319,6 +319,15 @@
               <li>Complete factory package-tested, charged and wired.</li>
             </ul>
           </div>
+          <div class="link-div">
+            <div class="link">
+              <a
+                href="https://york.com.sa/images/uploaded/eg/TEH-35-50-0319.pdf"
+                target="_blank"
+                >Download Brochure</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -380,10 +389,6 @@
                     motors with Class F Insulation. Totally Enclosed Air over
                     (TEAO) IP55 Condenser fan motors with Class F Insulation.
                   </li>
-                  <li>
-                    Microprocessor based Simplicity TM control board. Fresh air
-                    intake panel.
-                  </li>
                 </ul>
                 <ul>
                   <li>Copper tubes / Aluminum Fins coils Evaporator Coils.</li>
@@ -400,12 +405,16 @@
                     1 year limited warranty on the complete unit and additional
                     4 years warranty on compressors.
                   </li>
+                  <li>
+                    Microprocessor based Simplicity TM control board. Fresh air
+                    intake panel.
+                  </li>
                 </ul>
               </div>
               <div class="link-div">
                 <div class="link">
                   <a
-                    href="https://york.com.sa/images/uploaded/residential/Cassette/Taurus%20Cassette.pdf?la=en"
+                    href="https://york.com.sa/images/uploaded/eg/TZH-6.510-50-0119.pdf"
                     target="_blank"
                     >Download Brochure</a
                   >
@@ -467,7 +476,7 @@
                     High efficiency hermetic scroll compressors. Side air
                     discharge configuration.
                   </li>
-                  <li>Belt drive blower motor with variable pitch pulley.</li>
+
                   <li>
                     Totally Enclosed Fan Cooled (TEFC) IP55 Evaporator fan
                     motors with Class F Insulation. Totally Enclosed Air over
@@ -475,6 +484,7 @@
                   </li>
                 </ul>
                 <ul>
+                  <li>Belt drive blower motor with variable pitch pulley.</li>
                   <li>
                     Microprocessor based Simplicity TM control board. Fresh air
                     intake panel.
@@ -494,7 +504,7 @@
               <div class="link-div">
                 <div class="link">
                   <a
-                    href="https://york.com.sa/images/uploaded/residential/Cassette/Taurus%20Cassette.pdf?la=en"
+                    href="https://york.com.sa/images/uploaded/eg/TEH-13-50-0419.pdf"
                     target="_blank"
                     >Download Brochure</a
                   >
@@ -559,7 +569,7 @@
                     High efficiency hermetic scroll compressors. Side air
                     discharge configuration.
                   </li>
-                  <li>Belt drive blower motor with variable pitch pulley.</li>
+
                   <li>
                     Totally Enclosed Fan Cooled (TEFC) IP55 Evaporator fan
                     motors with Class F Insulation. Totally Enclosed Air over
@@ -567,6 +577,7 @@
                   </li>
                 </ul>
                 <ul>
+                  <li>Belt drive blower motor with variable pitch pulley.</li>
                   <li>
                     Microprocessor based Simplicity TM control board. Fresh air
                     intake panel.
@@ -586,7 +597,7 @@
               <div class="link-div">
                 <div class="link">
                   <a
-                    href="https://york.com.sa/images/uploaded/residential/Cassette/Taurus%20Cassette.pdf?la=en"
+                    href="https://york.com.sa/images/uploaded/eg/TEH-1628-50-1218.pdf"
                     target="_blank"
                     >Download Brochure</a
                   >
@@ -666,10 +677,22 @@
               <li>Complete factory package-tested, charged and wired.</li>
             </ul>
           </div>
+          <div class="link-div">
+            <div class="link">
+              <a
+                href="https://york.com.sa/images/uploaded/eg/TEH-3050-50-1219.pdf"
+                target="_blank"
+                >Download Brochure</a
+              >
+            </div>
+            <div class="pop-up">
+              <button class="pop-btn" type="button">Contact us</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="brief">
+    <div class="brief brilast">
       <div class="container">
         <div class="info">
           <h2>DEH Stellar MEGA Series</h2>
@@ -733,6 +756,18 @@
               <li>Single point power connection.</li>
               <li>Complete factory package-tested, charged and wired</li>
             </ul>
+          </div>
+          <div class="link-div">
+            <div class="link">
+              <a
+                href="https://york.com.sa/images/uploaded/eg/TEH-65100-50-1219.pdf"
+                target="_blank"
+                >Download Brochure</a
+              >
+            </div>
+            <div class="pop-up">
+              <button class="pop-btn" type="button">Contact us</button>
+            </div>
           </div>
         </div>
       </div>
@@ -904,15 +939,17 @@
     <!-- End Footer -->
     <script>
       // Show Contact pop - up
-      const pops = document.querySelector(".pop-up");
+      const pops = document.querySelectorAll(".pop-up");
       const pop = document.querySelector(".pop-over");
       const cancel = document.querySelector(".cancel");
 
-      pops.addEventListener("click", function () {
-        pop.classList.add("view");
-      });
-      cancel.addEventListener("click", function () {
-        pop.classList.remove("view");
+      pops.forEach(function (popss) {
+        popss.addEventListener("click", function () {
+          pop.classList.add("view");
+        });
+        cancel.addEventListener("click", function () {
+          pop.classList.remove("view");
+        });
       });
     </script>
     <script src="app.js"></script>

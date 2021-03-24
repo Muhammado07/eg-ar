@@ -351,7 +351,7 @@
               <div class="link-div">
                 <div class="link">
                   <a
-                    href="https://york.com.sa/images/uploaded/residential/Cassette/Taurus%20Cassette.pdf?la=en"
+                    href="https://york.com.sa/images/uploaded/eg/Brochure.pdf"
                     target="_blank"
                     >Download Brochure</a
                   >
@@ -386,7 +386,7 @@
               <div class="link-div">
                 <div class="link">
                   <a
-                    href="https://york.com.sa/images/uploaded/residential/Cassette/Taurus%20Cassette.pdf?la=en"
+                    href="https://york.com.sa/images/uploaded/eg/Brochure.pdf"
                     target="_blank"
                     >Download Brochure</a
                   >
@@ -433,7 +433,7 @@
               <div class="link-div">
                 <div class="link">
                   <a
-                    href="https://york.com.sa/images/uploaded/residential/Cassette/Taurus%20Cassette.pdf?la=en"
+                    href="https://york.com.sa/images/uploaded/eg/Brochure.pdf"
                     target="_blank"
                     >Download Brochure</a
                   >
@@ -616,15 +616,17 @@
     <!-- End Footer -->
     <script>
       // Show Contact pop - up
-      const pops = document.querySelector(".pop-up");
+      const pops = document.querySelectorAll(".pop-up");
       const pop = document.querySelector(".pop-over");
       const cancel = document.querySelector(".cancel");
 
-      pops.addEventListener("click", function () {
-        pop.classList.add("view");
-      });
-      cancel.addEventListener("click", function () {
-        pop.classList.remove("view");
+      pops.forEach(function (popss) {
+        popss.addEventListener("click", function () {
+          pop.classList.add("view");
+        });
+        cancel.addEventListener("click", function () {
+          pop.classList.remove("view");
+        });
       });
     </script>
     <script src="app.js"></script>
