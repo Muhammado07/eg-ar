@@ -665,8 +665,8 @@ a {
 }
 .serv .galary .details .content p {
   padding-top: 10px;
-  padding-right: 10px;
-  font-size: 14px;
+  padding-right: 90px;
+  font-size: 16px;
   line-height: 1.5;
 }
 .serv .galary .details:nth-child(2) .content,
@@ -743,6 +743,9 @@ a {
   }
   .serv .galary.g2 {
     margin-bottom: 20px;
+  }
+  .serv .galary .details .content p {
+    padding-right: 10px;
   }
 }
 
