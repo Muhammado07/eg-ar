@@ -1860,6 +1860,7 @@ a {
   width: 150px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 600;
   border: none;
   outline: none;
   padding: 15px 20px;
@@ -2017,7 +2018,7 @@ a {
     grid-gap: 0;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
   .link-div {
     flex-direction: column;
   }
@@ -2261,7 +2262,7 @@ a {
   ========= Aftermarket PAGE ==========
 ======================================= */
 .hero-after {
-  background: url("img/main.jpeg") 40% 44% no-repeat;
+  background: url("img/main.jpg") 40% 44% no-repeat;
   background-size: cover;
   width: 100vw;
   height: 80vh;
