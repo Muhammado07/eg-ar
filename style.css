@@ -588,7 +588,7 @@ a {
 }
 .serv .galary.g1 {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
 .serv .galary.g2 {
@@ -603,9 +603,7 @@ a {
 .serv .galary .details.de:nth-child(1) .res .img {
   height: 450px;
 }
-.serv .galary.g1 .details:nth-child(2),
-.serv .galary.g1 .details:nth-child(2) .res,
-.serv .galary.g1 .details:nth-child(2) .res .img {
+.serv .galary.g1 .details {
   height: 450px;
 }
 .serv .galary .details img {
@@ -632,7 +630,7 @@ a {
   object-fit: cover;
 }
 .serv .galary .details:nth-child(2) .img,
-.serv .galary.g1 .details:nth-child(1) .img {
+.serv .galary.g1 .details .img {
   height: 250px;
 }
 .serv .galary .details .res .content {
@@ -652,7 +650,7 @@ a {
 }
 
 .serv .galary .details:nth-child(1) .content,
-.serv .galary.g1 .details:nth-child(2) .content {
+.serv .galary.g1 .details .content {
   position: absolute;
   bottom: 70px;
   left: 40px;
@@ -670,26 +668,26 @@ a {
   line-height: 1.5;
 }
 .serv .galary .details:nth-child(2) .content,
-.serv .galary.g1 .details:nth-child(1) .content {
+.serv .galary.g1 .details .content {
   margin-top: 30px;
 }
-.serv .galary.g1 .details:nth-child(1) .content {
+.serv .galary.g1 .details:nth-child(2) .content {
+  bottom: 50px;
+}
+.serv .galary.g1 .details .content {
   left: 0;
 }
-.serv .galary.g1 .details:nth-child(1) .content h3,
-.serv .galary.g1 .details:nth-child(1) .content p {
+.serv .galary.g1 .details .content h3,
+.serv .galary.g1 .details .content p {
   color: var(--second-color);
 }
 .serv .galary .details:nth-child(2),
-.serv .galary.g1 .details:nth-child(1) {
+.serv .galary.g1 .details {
   background-color: var(--third-color);
 }
 .serv .galary .details:nth-child(2) .content,
-.serv .galary.g1 .details:nth-child(1) .content {
+.serv .galary.g1 .details .content {
   padding-left: 30px;
-}
-.serv .galary.g1 .details:nth-child(2) .content {
-  padding-left: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -699,15 +697,18 @@ a {
     margin-bottom: 0;
     grid-template-columns: 1fr;
   }
+  .serv .galary.g3 {
+    margin-top: 20px;
+  }
   .serv .galary .details,
   .serv .galary .details .res,
   .serv .galary .details .res .img,
   .serv .galary .details.de:nth-child(1),
   .serv .galary .details.de:nth-child(1) .res,
   .serv .galary .details.de:nth-child(1) .res .img,
-  .serv .galary.g1 .details:nth-child(2) .res,
-  .serv .galary.g1 .details:nth-child(2) .res img,
-  .serv .galary.g1 .details:nth-child(2) {
+  .serv .galary.g1 .details .res,
+  .serv .galary.g1 .details .res img,
+  .serv .galary.g1 .details {
     width: 100%;
     height: 250px;
     margin-right: 0;
@@ -720,8 +721,8 @@ a {
   }
   .serv .galary .details:nth-child(2) .content h3,
   .serv .galary .details:nth-child(2) .content p,
-  .serv .galary.g1 .details:nth-child(1) .content h3,
-  .serv .galary.g1 .details:nth-child(1) .content p {
+  .serv .galary.g1 .details .content h3,
+  .serv .galary.g1 .details .content p {
     color: var(--thrid-color);
   }
   .serv .galary .details .content,
@@ -732,20 +733,31 @@ a {
     z-index: 2;
   }
   .serv .galary .details.de:nth-child(1),
-  .serv .galary.g1 .details:nth-child(1) {
+  .serv .galary.g1 .details {
     margin-bottom: 0;
   }
   .serv .galary .details:nth-child(1) .content,
-  .serv .galary.g1 .details:nth-child(2) .content {
+  .serv .galary.g1 .details .content {
     left: 30px;
     bottom: 30px;
     padding-right: 10px;
   }
   .serv .galary.g2 {
-    margin-bottom: 20px;
+    grid-template-columns: 1fr;
   }
   .serv .galary .details .content p {
     padding-right: 10px;
+  }
+  .serv .galary.g1 .details .content {
+    left: 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  .serv .galary .details .content h3 {
+    font-size: 18px;
+  }
+  .serv .galary .details .content p {
+    font-size: 14px;
   }
 }
 
@@ -1661,6 +1673,13 @@ a {
   font-size: 35px;
   margin: 10px 0 20px 0;
 }
+.raya .details .content p {
+  font-size: 16px;
+  color: var(--second-color);
+  line-height: 1.7;
+  margin-bottom: 15px;
+  width: 85%;
+}
 .raya .content .details .link {
   margin-top: 15px;
 }
@@ -1706,6 +1725,9 @@ a {
   }
   .raya .details .content {
     margin-bottom: 20px;
+  }
+  .raya .details .content p {
+    width: 100%;
   }
 }
 
