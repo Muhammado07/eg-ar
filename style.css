@@ -689,8 +689,18 @@ a {
 .serv .galary.g1 .details .content {
   padding-left: 30px;
 }
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
+  .serv .galary .details:nth-child(2) .content.cons {
+    bottom: 20px;
+  }
+  .serv .galary.g1 .details:nth-child(2) .content {
+    bottom: 0;
+  }
+  .serv .galary .details .content p {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
   .serv .galary,
   .serv .galary.g1 {
     flex-direction: column;
@@ -750,6 +760,9 @@ a {
   }
   .serv .galary.g1 .details .content {
     left: 0;
+  }
+  .serv .galary.g1 .details:nth-child(2) .content {
+    bottom: 50px;
   }
 }
 @media screen and (max-width: 360px) {
@@ -1635,6 +1648,20 @@ a {
 .resi .content .details .link a:hover {
   opacity: 0.9;
 }
+@media screen and (max-width: 1024px) {
+  .resi .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .resi .content .details,
+  .resi .content .details .img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .resi .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (max-width: 767px) {
   .hero-res {
     height: 60vh;
@@ -1674,7 +1701,7 @@ a {
   margin: 10px 0 20px 0;
 }
 .raya .details .content p {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--second-color);
   line-height: 1.7;
   margin-bottom: 15px;
