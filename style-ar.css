@@ -434,7 +434,7 @@ a {
     ============================ */
 
 .hero {
-  background: url("img/hero3.jpeg") 100% 5% no-repeat;
+  background: url("img/hero3.jpg") 100% 5% no-repeat;
   background-size: cover;
   width: 100vw;
   height: 90vh;
@@ -2436,12 +2436,13 @@ a {
   color: var(--second-color);
   font-size: 35px;
   line-height: 1.7;
+  margin-top: 25px;
 }
 .value .details p {
   color: var(--second-color);
   font-size: 18px;
   line-height: 1.4;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .value .content .vl {
@@ -3326,7 +3327,7 @@ a {
 .main-apply .head h2 {
   color: var(--second-color);
   font-size: 35px;
-  line-height: 1.7;
+  line-height: 1.4;
 }
 .main-apply .head p,
 .main-apply .details .des .content p {
