@@ -1343,7 +1343,7 @@ a {
 
 /* Compnay */
 .company {
-  padding: 50px 0;
+  padding: 50px 0 0;
   position: relative;
   background-color: #fbfbfb;
   width: 100vw;
@@ -2144,8 +2144,8 @@ a {
     font-size: 18px;
   }
   .pop-over {
-    padding: 20px 0;
-    z-index: 9999999999999999999999999999999999999;
+    padding: 0;
+    z-index: 999999999999;
   }
   .product .content .contents {
     grid-template-columns: 1fr;
@@ -2970,6 +2970,12 @@ a {
     padding-left: 0;
   }
 }
+@media screen and (max-width: 360px) {
+  .formbox form .input-box input[type="submit"],
+  .pop-over .cancel {
+    width: 125px;
+  }
+}
 
 /* ====================================
   ========== SMART HOMES PAGE =========
@@ -3681,7 +3687,7 @@ a {
     padding-top: 10px;
   }
   .pop-content .formbox {
-    margin-top: 280px;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 484px) {
@@ -3693,6 +3699,9 @@ a {
 @media screen and (max-width: 360px) {
   .pop-over .pop-content {
     overflow-y: scroll;
+  }
+  .pop-content .formbox {
+    margin-top: 230px;
   }
   .mail-us {
     margin-bottom: 60px;
